@@ -20,10 +20,12 @@ module.exports = {
   /*
   ** Build configuration
   */
+  css: ['~/assets/main.css'],
   build: {
     /*
     ** Run ESLint on save
     */
+    vendor: ['axios'],
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
